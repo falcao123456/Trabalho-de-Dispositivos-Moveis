@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <title>My CRUD in NodeJS</title>
+</head>
+
+<body>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+  <h2>Registros</h2>
+  <table border="1">
+    <thead>
+      <tr>
+        <td>Nome do livro</td>
+        <td>Nome da editora</td>
+        <td>Nome do autor</td>
+        <td>Numero do volume</td>
+        <td>Numero de paginas</td>
+        <td>Data de lançamento</td>
+        <td>Numero da edição</td>
+        <td>Codigo do livro</td>
+        <td>Configurar</td>
+
+
+
+
+
+      </tr>
+    </thead>
+    <tbody>
+      <% data.forEach(function(details) { %>
+      <tr>
+        <td><%= details.nomedolivro %></td>
+        <td><%= details.nomedaeditora %></td>
+        <td><%= details.nomedoautor %></td>
+        <td><%= details.numerodovolume %></td>
+        <td><%= details.numerodepaginas %></td>
+        <td><%= details.datadelançamento %></td>
+        <td><%= details.numerodaedição %></td>
+        <td><%= details.codigodolivro %></td>
+
+        <td><a href="/edit/<%= details._id %>">Editar</a> - <a href="/delete/<%= details._id %>">Deletar</a></td>
+      </tr>
+      <% }) %>
+    </tbody>
+  </table>
+  <a href="/"class="btn btn-dark">Novo</a>
+  
+</body>
+</html>
