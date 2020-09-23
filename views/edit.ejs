@@ -6,30 +6,41 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 </head>
 <body>
- <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
  
-<h2>Editar Registro</h2>
+    
+    <body style="background-color: rgb(115, 119, 117);" ></body>
+    <table border="2"><h2><center>Editar Registro</center><h2></table><br>
+      <div class="container">
   <% data.forEach(function(details) { %>
-    <form action="/edit/<%= details._id %>" method="POST">
-      <input type="text" value="<%= details.nomedolivro %>" name="Nome do livro"><br>
-      <input type="text" value="<%= details.nomedaeditora %>" name="Nome da editora"><br>
-      <input type="text" value="<%= details.nomedoautor %>" name="nomedaeditora"><br>
-      <input type="text" value="<%= details.numerodovolume %>" name="nomedaeditora"><br>
-      <input type="text" value="<%= details.numerodepaginas %>" name="nomedaeditora"><br>
-      <input type="text" value="<%= details.datadelançamento %>" name="nomedaeditora"><br>
-      <input type="text" value="<%= details.numerodaedição %>" name="nomedaeditora"><br>
-      <input type="text" value="<%= details.codigodolivro %>" name="nomedaeditora"><br>
+    <form class="form-group cadastro" action="/edit/<%= details._id %>" method="POST">
+      <input class="form-control" type="text" placeholder="Nome do livro" value="<%= details.nomedolivro %>" name="nomedolivro"><br>
+      <input class="form-control" type="text" placeholder="Nome da editora" value="<%= details.nomedaeditora %>" name="nome da editora"><br>
+      <input class="form-control" type="text" placeholder="Nome da autor" value="<%= details.nomedoautor %>" name="nome da autor"><br>
+      <input class="form-control" type="number" placeholder="Numero do volume" value="<%= details.numerodovolume %>" name="numero do volume"><br>
+      <input class="form-control" type="number" placeholder="Numero de paginas" value="<%= details.numerodepaginas %>" name="numero de paginas"><br>
+      <input class="form-control" type="date" placeholder="Data de lançamento" value="<%= details.datadelançamento %>" name="data de lançamento"><br>
+      <input class="form-control" type="number" placeholder="Numero da edição " value="<%= details.numerodaedição %>" name="numero da edição"><br>
+      <input class="form-control" type="number" placeholder="Codigo do livro" value="<%= details.codigodolivro %>" name="codigo do livro"><br>
       
+    
+     
+      <button class="btn btn-success" type="submit">Confirmar</button><br>
+      
+      <a href="/show"class="btn btn-danger">Cancelar</a><br>
 
+      <a href="/"class="btn btn-dark">Novo Cadastro</a><br>
 
-
-      <br />
-      <button><a href="/show">Todos</a></button>
-      <button type="submit">Editar</button>
-      <button><a href="/show">Cancelar</a></button>
+    </div>
     </form>
   <% }) %>
  
 </body>
 </html>
+
+<style>
+  .cadastro{
+    display:grid;
+    grid-template-columns: 1fr ;
+    gap: 10px
+  }
+</style>
