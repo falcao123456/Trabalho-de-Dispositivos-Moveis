@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <meta charset="UTF-8">
+  <title>My CRUD in NodeJS</title>
+</head>
+<body style="background-color: rgb(115, 119, 117);" >
+ <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+ 
+  <font color=white>  
+  <h2> <center>Registros</center>
+  </h2>
+  </font> 
+  <center> 
+    <div >
+    <table class="table table-dark">
+  </center> 
+    <thead>
+  <tr>
+         <td><center> Nome</center></td><br>
+            <td><center>Sobrenome</center> </td> 
+             <td><center>Cpf</center> </td>
+             <td><center>Data de Nascimento</center> </td>
+             <td><center>Email</center> </td>
+             <td><center>Pais</center> </td>
+             <td><center>Estado</center> </td>
+             <td><center>Cidade</center> </td>
+             <td><center>Rua</center> </td>
+             <td><center>Numero da casa</center> </td>
+             <td><center>Numero para contato</center> </td>
+            <td><center>Menu</center>
+            </td>
+          
+           
+        </tr> 
+    </thead>
+    <tbody>
+    <% data.forEach(function(details) { %>
+       <tr> 
+            <td><center><%= details.name %></center></td>
+            <td><center><%= details.sobrenome %></center></td>
+            <td><center><%= details.cpf %></center></td>
+            <td><center><%= details.datanascimento %></center></td>
+            <td><center><%= details.email %></center></td>
+            <td><center><%= details.pais%></center></td>
+            <td><center><%= details.estado %></center></td>
+            <td><center><%= details.cidade %></center></td>
+            <td><center><%= details.rua %></center></td>
+            <td><center><%= details.casa %></center></td>
+             <td><center><%= details.numerocontato %></center></td>
+            
+            
+            <td><a href="/edit/<%= details._id %>">Editar</a> - <a href="/delete/<%= details._id %>">Deletar</a></td>
+        </tr>
+        <% }) %>
+    </tbody>
+  </table><br>
+
+  <a href="/"class="btn btn-dark">Novo</a>
+</div>
+</body>
+</html>

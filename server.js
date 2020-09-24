@@ -58,7 +58,7 @@ app.route('/edit/:id')
 .post((req, res) => {
   var id = req.params.id
   var nomedolivro = req.body.nomedolivro
-  var surname = req.body.surname
+  var surname = req.body.nomedaeditora
   var name = req.body.name
   var name = req.body.name
   var name = req.body.name
