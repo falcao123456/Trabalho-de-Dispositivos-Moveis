@@ -22,7 +22,7 @@ app.use(bodyparser.urlencoded({ extended: true}))
 app.set('view engine', 'ejs')
  
 app.get('/', function(req, res){
-    res.render('index.ejs');
+    res.render('cadastro de livros/index.ejs');
 });
  
 app.post('/show', (req, res)=>{

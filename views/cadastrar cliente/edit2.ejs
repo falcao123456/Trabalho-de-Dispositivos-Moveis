@@ -5,20 +5,50 @@
   <title>My CRUD in NodeJS</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 </head>
-<body>
- <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<body background="https://images2.alphacoders.com/261/26102.jpg" >
  
-<h2>Editar Registro</h2>
+    
+    <body ></body>
+
+    <font color=white>
+
+    <table border="2"><h2><center>Editar Registro</center><h2>
+
+    </table>
+    <br>
+    </font>
+    <center>
+
+      <div class="container">
   <% data.forEach(function(details) { %>
-    <form action="/edit/<%= details._id %>" method="POST">
-      <input type="text" value="<%= details.name %>" name="name">
-      <input type="text" value="<%= details.surname %>" name="surname">
-      <br />
-      <button><a href="/show">Todos</a></button>
-      <button type="submit">Editar</button>
+    
+    <form class="form-group cadastro" action="/edit/<%= details._id %>" method="POST">
+      <input class="form-control" type="text" placeholder="Nome" value="<%= details.nomedolivro %>" name="name"style='width: 400px'><br>
+      <input class="form-control" type="text" placeholder="Sobrenome" value="<%= details.nomedaeditora %>" name="sobrenome"style='width: 400px'><br>
+      <input class="form-control" type="text" placeholder="CPF" value="<%= details.nomedoautor %>" name="cpf"style='width: 400px'><br>
+      <input class="form-control" type="number" placeholder="Data de Nascimento" value="<%= details.numerodovolume %>" name="datanascimento"style='width: 400px'><br>
+      <input class="form-control" type="number" placeholder="Email" value="<%= details.numerodepaginas %>" name="email"style='width: 400px'><br>
+      <input class="form-control" type="date" placeholder="Pais" value="<%= details.datadelançamento %>" name="pais"style='width: 400px'><br>
+      <input class="form-control" type="number" placeholder="Estado" value="<%= details.numerodaedição %>" name="estado"style='width: 400px'><br>
+      <input class="form-control" type="number" placeholder="Cidade" value="<%= details.codigodolivro %>" name="cidade"style='width: 400px'><br>
+      <input class="form-control" type="number" placeholder="Rua" value="<%= details.codigodolivro %>" name="rua"style='width: 400px'><br>
+      <input class="form-control" type="number" placeholder="Numero da casa" value="<%= details.codigodolivro %>" name="casa"style='width: 400px'><br>
+      <input class="form-control" type="number" placeholder="Numero para contato" value="<%= details.codigodolivro %>" name="numerocontato"style='width: 400px'><br>
+
+      <button class="btn btn-success" type="submit"style='width: 400px'>Confirmar</button>
+      <br><br>
+      <a href="/show"class="btn btn-danger"style='width: 400px'>Cancelar</a>
+      <br>
+      <br>
+
+      <a href="/"class="btn btn-dark"style='width: 400px'>Novo Cadastro</a>
+      <br>
+      <br>
+    </center>
+    </div>
     </form>
   <% }) %>
  
 </body>
 </html>
+
