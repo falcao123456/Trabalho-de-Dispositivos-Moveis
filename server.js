@@ -93,11 +93,3 @@ app.route('/delete/:id')
     res.redirect('/show')
   })
 })
-
-
-
-
-
-
-
-
