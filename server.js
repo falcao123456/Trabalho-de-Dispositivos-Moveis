@@ -21,10 +21,50 @@ app.use(bodyparser.urlencoded({ extended: true}))
  
 app.set('views engine', 'ejs')
  
+                             //DIVISÃO INICIAL INICIAL*******************************
+
 app.get('/', function(req, res){
-    res.render('cadastro de livro/index.ejs');
+    res.render('cadastrarcliente/index2.ejs');
 });
+
+app.post('/show2', (req, res)=>{
+  //criar a coleção “data”, que irá armazenar nossos dados
+  db.collection('data').save(req.body, (err, result) => {
+      if (err) return console.log(err)
+   
+      console.log('Salvo no Banco de Dados')
+      res.redirect('/show2')
+    })
+});
+
+app.get('/', (req, res) => {
+  var cursor = db.collection('data').find()
+})
+
+app.get('/show2', (req, res) => {
+  db.collection('data').find().toArray((err, results) => {
+      if (err) return console.log(err)
+      res.render('cadastrarcliente/show2.ejs', { data: results })
+
+  })
+})
+
+app.route('/edit/:id')
+.get((req, res) => {
+  var id = req.params.id
  
+  db.collection('data').find(ObjectId(id)).toArray((err, result) => {
+    if (err) return res.send(err)
+    res.render('cadastrarcliente/edit2.ejs', { data: result })
+  })
+})
+
+                              //divisoria entre os arquivos************************
+
+app.get('/', function(req, res){
+  res.render('cadastro de livro/index.ejs');
+});
+
 app.post('/show', (req, res)=>{
     //criar a coleção “data”, que irá armazenar nossos dados
     db.collection('data').save(req.body, (err, result) => {
