@@ -19,10 +19,10 @@ MongoClient.connect(uri, (err, client) => {
  
 app.use(bodyparser.urlencoded({ extended: true}))
  
-app.set('view engine', 'ejs')
+app.set('views engine', 'ejs')
  
 app.get('/', function(req, res){
-    res.render('cadastro de livros/index.ejs');
+    res.render('cadastro de livro/index.ejs');
 });
  
 app.post('/show', (req, res)=>{
@@ -42,7 +42,7 @@ app.get('/', (req, res) => {
 app.get('/show', (req, res) => {
     db.collection('data').find().toArray((err, results) => {
         if (err) return console.log(err)
-        res.render('show.ejs', { data: results })
+        res.render('cadastro de livro/show.ejs', { data: results })
  
     })
 })
@@ -52,7 +52,7 @@ app.route('/edit/:id')
  
   db.collection('data').find(ObjectId(id)).toArray((err, result) => {
     if (err) return res.send(err)
-    res.render('edit.ejs', { data: result })
+    res.render('cadastro de livro/edit.ejs', { data: result })
   })
 })
 .post((req, res) => {
