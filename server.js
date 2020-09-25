@@ -20,51 +20,50 @@ MongoClient.connect(uri, (err, client) => {
 app.use(bodyparser.urlencoded({ extended: true}))
  
 app.set('views engine', 'ejs')
- 
-                             //DIVISÃO INICIAL INICIAL*******************************
 
-app.get('/', function(req, res){
-    res.render('cadastrarcliente/index2.ejs');
+
+
+// Codigos referente a segunda pagina********************************************************************
+
+
+app.get('/cadastrarcliente', function(req, res){
+  res.render('cadastrarcliente/index2.ejs');
+   });
+
+   app.post('/show2', (req, res)=>{
+    //criar a coleção “data”, que irá armazenar nossos dados
+    db.collection('data').save(req.body, (err, result) => {
+        if (err) return console.log(err)
+     
+        console.log('Salvo no Banco de Dados')
+        res.redirect('/show2')
+      })
 });
-
-app.post('/show2', (req, res)=>{
-  //criar a coleção “data”, que irá armazenar nossos dados
-  db.collection('data').save(req.body, (err, result) => {
-      if (err) return console.log(err)
-   
-      console.log('Salvo no Banco de Dados')
-      res.redirect('/show2')
-    })
-});
-
-app.get('/', (req, res) => {
-  var cursor = db.collection('data').find()
-})
 
 app.get('/show2', (req, res) => {
-  db.collection('data').find().toArray((err, results) => {
-      if (err) return console.log(err)
-      res.render('cadastrarcliente/show2.ejs', { data: results })
-
-  })
+    var cursor = db.collection('data').find()
 })
-
-app.route('/edit/:id')
-.get((req, res) => {
-  var id = req.params.id
  
-  db.collection('data').find(ObjectId(id)).toArray((err, result) => {
-    if (err) return res.send(err)
-    res.render('cadastrarcliente/edit2.ejs', { data: result })
-  })
+app.get('/show2', (req, res) => {
+    db.collection('data').find().toArray((err, results) => {
+        if (err) return console.log(err)
+        res.render('cadastrarcliente/show2.ejs', { data: results })
+ 
+    })
 })
+   
 
-                              //divisoria entre os arquivos************************
+//FInal do codigo****************************************************************************************
+
+
+
+
+
 
 app.get('/', function(req, res){
-  res.render('cadastro de livro/index.ejs');
+  res.render('cadastrodelivro/index.ejs');
 });
-
+ 
 app.post('/show', (req, res)=>{
     //criar a coleção “data”, que irá armazenar nossos dados
     db.collection('data').save(req.body, (err, result) => {
@@ -82,7 +81,7 @@ app.get('/', (req, res) => {
 app.get('/show', (req, res) => {
     db.collection('data').find().toArray((err, results) => {
         if (err) return console.log(err)
-        res.render('cadastro de livro/show.ejs', { data: results })
+        res.render('cadastrodelivro/show.ejs', { data: results })
  
     })
 })
@@ -92,7 +91,7 @@ app.route('/edit/:id')
  
   db.collection('data').find(ObjectId(id)).toArray((err, result) => {
     if (err) return res.send(err)
-    res.render('cadastro de livro/edit.ejs', { data: result })
+    res.render('cadastrodelivro/edit.ejs', { data: result })
   })
 })
 .post((req, res) => {
