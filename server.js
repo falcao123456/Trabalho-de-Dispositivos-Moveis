@@ -97,24 +97,30 @@ app.route('/edit/:id')
 .post((req, res) => {
   var id = req.params.id
   var nomedolivro = req.body.nomedolivro
-  var surname = req.body.nomedaeditora
-  var name = req.body.name
-  var name = req.body.name
-  var name = req.body.name
-  var name = req.body.name
-  var name = req.body.name
+  var nomedaeditora = req.body.nomedaeditora
+  var nomedoautor = req.body.nomedoautor
+  var numerodovolume = req.body.numerodovolume
+  var numerodepaginas = req.body.numerodepaginas
+  var datadelançamento = req.body.datadelançamento
+  var numerodaedição = req.body.numerodaedição
+  var codigodolivro = req.body.codigodolivro
+
+
+ 
   
 
  
   db.collection('data').updateOne({_id: ObjectId(id)}, {
     $set: {
       nomedolivro: nomedolivro,
-      surname: surname,
-      surname: surname,
-      surname: surname,
-      surname: surname,
-      surname: surname,
-      surname: surname
+      nomedaeditora: nomedaeditora,
+      nomedoautor: nomedoautor,
+      numerodovolume: numerodovolume,
+      numerodepaginas: numerodepaginas,
+      datadelançamento: datadelançamento,
+      numerodaedição: numerodaedição,
+      codigodolivro: codigodolivro,
+      
     }
   }, (err, result) => {
     if (err) return res.send(err)
