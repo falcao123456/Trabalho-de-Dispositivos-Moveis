@@ -22,18 +22,18 @@
       <div class="container">
   <% data.forEach(function(details) { %>
     
-    <form class="form-group cadastro" action="/edit2/<%= details._id2 %>" method="POST">
-      <input class="form-control" type="text" placeholder="Nome"                 value="<%= details.nome %>"            name="nome"style='width: 400px'><br>
-      <input class="form-control" type="text" placeholder="Sobrenome"            value="<%= details.sobrenome %>"      name="sobrenome"style='width: 400px'><br>
-      <input class="form-control" type="text" placeholder="CPF"                  value="<%= details.cpf %>"            name="cpf"style='width: 400px'><br>
-      <input class="form-control" type="number" placeholder="Data de Nascimento" value="<%= details.datanascimento %>" name="datanascimento"style='width: 400px'><br>
-      <input class="form-control" type="number" placeholder="Email"              value="<%= details.email %>"          name="email"style='width: 400px'><br>
-      <input class="form-control" type="date" placeholder="Pais"                 value="<%= details.pais %>"           name="pais"style='width: 400px'><br>
-      <input class="form-control" type="number" placeholder="Estado"             value="<%= details.estado %>"         name="estado"style='width: 400px'><br>
-      <input class="form-control" type="number" placeholder="Cidade"             value="<%= details.cidade %>"         name="cidade"style='width: 400px'><br>
-      <input class="form-control" type="number" placeholder="Rua"                value="<%= details.rua %>"            name="rua"style='width: 400px'><br>
-      <input class="form-control" type="number" placeholder="Numero da casa"     value="<%= details.casa %>"           name="casa"style='width: 400px'><br>
-      <input class="form-control" type="number" placeholder="Numero para contato"value="<%= details.numerocontato %>"  name="numerocontato"style='width: 400px'><br>
+    <form class="form-group cadastro" action="/edit/<%= details._id %>" method="POST">
+      <input class="form-control" type="text" placeholder="Nome" value="<%= details.nomedolivro %>" name="name"style='width: 400px'><br>
+      <input class="form-control" type="text" placeholder="Sobrenome" value="<%= details.nomedaeditora %>" name="sobrenome"style='width: 400px'><br>
+      <input class="form-control" type="text" placeholder="CPF" value="<%= details.nomedoautor %>" name="cpf"style='width: 400px'><br>
+      <input class="form-control" type="number" placeholder="Data de Nascimento" value="<%= details.numerodovolume %>" name="datanascimento"style='width: 400px'><br>
+      <input class="form-control" type="number" placeholder="Email" value="<%= details.numerodepaginas %>" name="email"style='width: 400px'><br>
+      <input class="form-control" type="date" placeholder="Pais" value="<%= details.datadelançamento %>" name="pais"style='width: 400px'><br>
+      <input class="form-control" type="number" placeholder="Estado" value="<%= details.numerodaedição %>" name="estado"style='width: 400px'><br>
+      <input class="form-control" type="number" placeholder="Cidade" value="<%= details.codigodolivro %>" name="cidade"style='width: 400px'><br>
+      <input class="form-control" type="number" placeholder="Rua" value="<%= details.codigodolivro %>" name="rua"style='width: 400px'><br>
+      <input class="form-control" type="number" placeholder="Numero da casa" value="<%= details.codigodolivro %>" name="casa"style='width: 400px'><br>
+      <input class="form-control" type="number" placeholder="Numero para contato" value="<%= details.codigodolivro %>" name="numerocontato"style='width: 400px'><br>
 
       <button class="btn btn-success" type="submit"style='width: 400px'>Confirmar</button>
       <br><br>
