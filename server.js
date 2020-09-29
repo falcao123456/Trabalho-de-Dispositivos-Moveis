@@ -52,6 +52,16 @@ app.get('/show2', (req, res) => {
     })
 })
    
+app.route('/delete2/:id')
+.get((req, res) => {
+  var id = req.params.id
+ 
+  db.collection('data').deleteOne({_id: ObjectId(id)}, (err, result) => {
+    if (err) return res.send(500, err)
+    console.log('Deletado do Banco de Dados!')
+    res.redirect('/show2')
+  })
+})
 
 //FInal do codigo****************************************************************************************
 
@@ -128,7 +138,7 @@ app.route('/edit/:id')
     console.log('Atualizado no Banco de Dados')
   })
 })
-app.route('/delete/:id')
+app.route('/delete/:id/')
 .get((req, res) => {
   var id = req.params.id
  
