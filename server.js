@@ -40,7 +40,7 @@ app.get('/cadastrarcliente', function(req, res){
       })
 });
 
-app.get('/show2', (req, res) => {
+app.get('/cadastrarcliente', (req, res) => {
     var cursor = db.collection('data').find()
 })
  
