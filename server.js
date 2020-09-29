@@ -74,7 +74,7 @@ app.post('/show', (req, res)=>{
       })
 });
 
-app.get('/', (req, res) => {
+app.get('/cadastrodelivro', (req, res) => {
     var cursor = db.collection('data').find()
 })
  
