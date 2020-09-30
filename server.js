@@ -51,6 +51,55 @@ app.get('/show2', (req, res) => {
  
     })
 })
+// METODO EDITAR SEGUNDA PAGINA***************************************************
+
+app.route('/edit2/:id')
+.get((req, res) => {
+  var id = req.params.id
+ 
+  db.collection('data').find(ObjectId(id)).toArray((err, result) => {
+    if (err) return res.send(err)
+    res.render('cadastrarcliente/edit2.ejs', { data: result })
+  })
+})
+
+.post((req, res) => {
+  var id = req.params.id
+  var nome = req.body.nome
+  var sobrenome = req.body.sobrenome
+  var cpf = req.body.cpf
+  var datanascimento = req.body.datanascimento
+  var email = req.body.email
+  var pais = req.body.pais
+  var estado = req.body.estado
+  var rua = req.body.rua
+  var numerocasa = req.body.numerocasa
+  var numerocontato = req.body.numerocontato
+
+ 
+  db.collection('data').updateOne({_id: ObjectId(id)}, {
+    $set: {
+      nome: nome,
+      sobrenome: sobrenome,
+      cpf: cpf,
+      datanascimento: datanascimento,
+      email: email,
+      pais: pais,
+      estado: estado,
+      rua: rua,
+      numerocasa: numerocasa,
+      numerocontato: numerocontato,
+      
+    }
+  }, 
+  (err, result) => {
+    if (err) return res.send(err)
+    res.redirect('/show2')
+    console.log('Atualizado no Banco de Dados')
+  })
+})
+
+// METODO DELETE DA SEGUNDA PAGINA***********************************************
    
 app.route('/delete2/:id')
 .get((req, res) => {
@@ -114,11 +163,7 @@ app.route('/edit/:id')
   var datadelançamento = req.body.datadelançamento
   var numerodaedição = req.body.numerodaedição
   var codigodolivro = req.body.codigodolivro
-
-
- 
   
-
  
   db.collection('data').updateOne({_id: ObjectId(id)}, {
     $set: {
@@ -132,13 +177,15 @@ app.route('/edit/:id')
       codigodolivro: codigodolivro,
       
     }
-  }, (err, result) => {
+  }, 
+
+  (err, result) => {
     if (err) return res.send(err)
     res.redirect('/show')
     console.log('Atualizado no Banco de Dados')
   })
 })
-app.route('/delete/:id/')
+app.route('/delete/:id')
 .get((req, res) => {
   var id = req.params.id
  

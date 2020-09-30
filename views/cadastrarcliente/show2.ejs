@@ -30,7 +30,7 @@
              <td><center>Rua</center> </td>
              <td><center>Numero da casa</center> </td>
              <td><center>Numero para contato</center> </td>
-            <td><center>Menu</center>
+            <td><center>Configurações</center>
             </td>
           
            
@@ -39,7 +39,7 @@
     <tbody>
     <% data.forEach(function(details) { %>
        <tr> 
-            <td><center><%= details.name %></center></td>
+            <td><center><%= details.nome %></center></td>
             <td><center><%= details.sobrenome %></center></td>
             <td><center><%= details.cpf %></center></td>
             <td><center><%= details.datanascimento %></center></td>
@@ -48,17 +48,17 @@
             <td><center><%= details.estado %></center></td>
             <td><center><%= details.cidade %></center></td>
             <td><center><%= details.rua %></center></td>
-            <td><center><%= details.casa %></center></td>
+            <td><center><%= details.numerocasa %></center></td>
              <td><center><%= details.numerocontato %></center></td>
             
             
-            <td><a href="/edit/<%= details._id %>">Editar</a> - <a href="/delete2/<%= details._id %>">Deletar</a></td>
+            <td><a href="/edit2/<%= details._id %>">Editar</a> - <a href="/delete2/<%= details._id %>">Deletar</a></td>
         </tr>
         <% }) %>
     </tbody>
   </table><br>
 
-  <a href="/cadastrarcliente"class="btn btn-dark">Menu</a>
+  <a href="/cadastrarcliente"class="btn btn-dark" style= 'margin-top:-50px'>Novo Cadastro de Cliente</a>
 </div>
 </body>
 </html>
