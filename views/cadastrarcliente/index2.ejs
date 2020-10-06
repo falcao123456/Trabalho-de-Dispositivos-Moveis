@@ -13,68 +13,69 @@
 
 <nav class="navbar navbar-expand-lg navbar-blue bg-dark">
   
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Alterna navegação">
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Alterna navegação">
     <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+</button>
+
+<div class="collapse navbar-collapse" id="navbarNavDropdown">
     <ul class="navbar-nav">
       
-      <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Menu  Livro
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+<li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Menu  Livro
+          </a>
+<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
           <a class="dropdown-item" href="/">Cadastro</a>
           <a class="dropdown-item" href="/show">Lista</a>
         
-        </div>
-      </li>
+</div>
+</li>
     </ul>
 
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      <ul class="navbar-nav">
+ <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
         
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+<li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
           Menu  Cliente
-          </a>
+            </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <a class="dropdown-item" href="/cadastrarcliente">Cadastro</a>
             <a class="dropdown-item" href="/show2">Lista</a>
           
-          </div>
-        </li>
-      </ul>
+</div>
+</li>
+</ul>
 
 
-  </div>
+</div>
 </nav>
 
 
 
 
-    <font color=white>  
-    <h2><center> Cadastrar Cliente  </center>  <h2> <br>
-   <center> 
-   </font>  
+  <font color=white>  
+  <h2><center> Cadastrar Cliente  </center>  <h2> <br>
+  <center> 
+  </font>  
         <form action="/show2" method="POST">
         <input class="form-control"  type="text"   placeholder="Nome"                  name="nome"style='width: 400px'><br>
         <input class="form-control"  type="text"   placeholder="Sobrenome"             name="sobrenome"style='width: 400px'><br>
-        <input class="form-control"  type="number" placeholder="CPF"                 name="cpf"style='width: 400px'><br>
+        <input class="form-control"  type="number" placeholder="CPF"                   name="cpf"style='width: 400px'><br>
         <input class="form-control"  type="date"   placeholder="Data de Nascimento"    name="datanascimento"style='width: 400px'><br>
-        <input class="form-control"  type="email"  placeholder="Email"                name="email"style='width: 400px'><br>
+        <input class="form-control"  type="email"  placeholder="Email"                 name="email"style='width: 400px'><br>
         <input class="form-control"  type="text"   placeholder="Pais"                  name="pais"style='width: 400px'><br>
         <input class="form-control"  type="text"   placeholder="Estado"                name="estado"style='width: 400px'><br>
         <input class="form-control"  type="text"   placeholder="Cidade"                name="cidade"style='width: 400px'><br>
         <input class="form-control"  type="text"   placeholder="Rua"                   name="rua"style='width: 400px'><br>
-        <input class="form-control"  type="number" placeholder="Numero da casa"      name="numerocasa"style='width: 400px'><br>
-        <input class="form-control"  type="number" placeholder="Numero para contato" name="numerocontato"style='width: 400px'><br>
+        <input class="form-control"  type="number" placeholder="Numero da casa"        name="numerocasa"style='width: 400px'><br>
+        <input class="form-control"  type="number" placeholder="Numero para contato"   name="numerocontato"style='width: 400px'><br>
       
 
 
-        <button type="submit" class="btn btn-dark" >Cadastrar</button>
-        <a href="/show2"class="btn btn-primary">Proseguir</a>
-      </center>
+    <button type="submit" class="btn btn-dark" >Cadastrar</button>
+    <a href="/show2"class="btn btn-primary">Proseguir</a>
+    </center>
     </form> 
 
 </body>

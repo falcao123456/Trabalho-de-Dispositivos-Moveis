@@ -13,43 +13,41 @@
  <!-- Bootstrap CSS -->
     
  
- <nav class="navbar navbar-expand-lg navbar-blue bg-dark">
+  <nav class="navbar navbar-expand-lg navbar-blue bg-dark">
   
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Alterna navegação">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav">
           
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
            Menu   Livro
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              </a>
+  <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
               <a class="dropdown-item" href="/">Cadastro</a>
               <a class="dropdown-item" href="/show">Lista</a>
             
-            </div>
-          </li>
+        </div>
+        </li>
         </ul>
     
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
           <ul class="navbar-nav">
             
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Menu  Cliente
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+  <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Menu  Cliente
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                 <a class="dropdown-item" href="/cadastrarcliente">Cadastro</a>
                 <a class="dropdown-item" href="/show2">Lista</a>
               
-              </div>
-            </li>
-          </ul>
-    
-    
-      </div>
+    </div>
+    </li>
+    </ul>
+    </div>
     </nav>
 
 
@@ -64,13 +62,15 @@
   </h2>
   </font> 
   <center> 
-    <div >
+  <div >
       <table class="table table-bordered table-dark" style='width: 1350px' </table>   >
   </center> 
     <thead>
+
+
   <tr>
-         <td><center> Nome</center></td><br>
-            <td><center>Sobrenome</center> </td> 
+             <td><center> Nome</center></td><br>
+             <td><center>Sobrenome</center> </td> 
              <td><center>Cpf</center> </td>
              <td><center>Data de Nascimento</center> </td>
              <td><center>Email</center> </td>
@@ -80,15 +80,19 @@
              <td><center>Rua</center> </td>
              <td><center>Numero da casa</center> </td>
              <td><center>Numero para contato</center> </td>
-            <td><center>Configurações</center>
-            </td>
+             <td><center>Configurações</center>
+             </td>
           
            
-        </tr> 
+  </tr> 
+
+
     </thead>
     <tbody>
+
     <% data.forEach(function(details) { %>
-       <tr> 
+
+  <tr> 
             <td><center><%= details.nome %></center></td>
             <td><center><%= details.sobrenome %></center></td>
             <td><center><%= details.cpf %></center></td>
@@ -99,16 +103,19 @@
             <td><center><%= details.cidade %></center></td>
             <td><center><%= details.rua %></center></td>
             <td><center><%= details.numerocasa %></center></td>
-             <td><center><%= details.numerocontato %></center></td>
+            <td><center><%= details.numerocontato %></center></td>
             
             
             <td><a href="/edit2/<%= details._id %>">Editar</a> - <a href="/delete2/<%= details._id %>">Deletar</a></td>
-        </tr>
-        <% }) %>
-    </tbody>
+  </tr>
+
+    <% }) %>
+
+  </tbody>
   </table><br>
 
   <a href="/cadastrarcliente"class="btn btn-dark" style= 'margin-top:-50px'>Novo Cadastro de Cliente</a>
+  
 </div>
 </body>
 </html>

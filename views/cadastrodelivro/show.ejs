@@ -14,38 +14,38 @@
   <nav class="navbar navbar-expand-lg navbar-blue bg-dark">
   
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Alterna navegação">
-      <span class="navbar-toggler-icon"></span>
+    <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      <ul class="navbar-nav">
+    <ul class="navbar-nav">
         
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-           Menu Livro
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                     Menu Livro
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <a class="dropdown-item" href="/">Cadastro</a>
             <a class="dropdown-item" href="/show">Lista</a>
           
-          </div>
-        </li>
+      </div>
+      </li>
       </ul>
   
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav">
+      <ul class="navbar-nav">
           
-          <li class="nav-item dropdown">
-             <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Menu Cliente 
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+      <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                             Menu Cliente 
+              </a>
+      <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
               <a class="dropdown-item" href="/cadastrarcliente">Cadastro</a>
               <a class="dropdown-item" href="/show2">Lista</a>
             
-            </div>
-          </li>
-        </ul>
-    </div>
+  </div>
+  </li>
+  </ul>
+  </div>
   </nav>
 
 
@@ -72,9 +72,10 @@
 
 
 
-      </tr>
+    </tr>
     </thead>
     <tbody>
+      
       <% data.forEach(function(details) { %>
       <tr>
         <td><%= details.nomedolivro %></td>
@@ -92,9 +93,10 @@
 
 
  <% }) %>
-    </tbody>
-  </table> <br>
-  <a href="/"class="btn btn-dark"style= 'margin-top:-50px'>Novo Cadastro</a>
+ 
+</tbody>
+</table> <br>
+<a href="/"class="btn btn-dark"style= 'margin-top:-50px'>Novo Cadastro</a>
   
 </body>
 </html>
