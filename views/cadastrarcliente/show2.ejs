@@ -105,8 +105,35 @@
             <td><center><%= details.numerocasa %></center></td>
             <td><center><%= details.numerocontato %></center></td>
             
+        <td><a href="/edit2/<%= details._id %>">Editar</a> - 
+  
+     
+          <button type="button" class="btn-link" data-toggle="modal" data-target="#confirm">Deletar</button>
+       
+           <div class="modal fade" id="confirm" role="dialog">
+             <div class="modal-dialog modal-md">
+           
+               <div class="modal-content">
+                 <div class="modal-body" >
+                   <font color=Black>
+                        Deseja realmente fazer isso?
+                       
+                </font>
+                </div>
+                <div class="modal-footer">
+                <a href="/delete2/<%= details._id %>"  type="button" class="btn btn-danger" id="delete">Apagar Registo</a>
+                <button href="/show2" type="button" data-dismiss="modal" class="btn btn-default">Cancelar</button>
+       
+  </div>
+  </div>       
+  </div>
+  </div>    
             
-            <td><a href="/edit2/<%= details._id %>">Editar</a> - <a href="/delete2/<%= details._id %>">Deletar</a></td>
+            
+            
+            
+            
+  </a></td>
   </tr>
 
     <% }) %>
