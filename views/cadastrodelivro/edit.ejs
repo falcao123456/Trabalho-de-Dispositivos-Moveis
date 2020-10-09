@@ -1,91 +1,111 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <title>Tela de Edição</title>
-  
+
 </head>
 
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+  integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+  integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
-<body background="https://images2.alphacoders.com/261/26102.jpg" >
-    <body ></body>
+<body background="https://images2.alphacoders.com/261/26102.jpg">
 
-    <nav class="navbar navbar-expand-lg navbar-blue bg-dark">
-  
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Alterna navegação">
-        <span class="navbar-toggler-icon"></span>
+  <body></body>
+
+  <nav class="navbar navbar-expand-lg navbar-blue bg-dark">
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Alterna navegação">
+      <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
-        <ul class="navbar-nav">
-          
-    <li class="nav-item dropdown">
-             <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                  Menu  Livro
-             </a>
-    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <a class="dropdown-item" href="/">Cadastro</a>
-              <a class="dropdown-item" href="/show">Lista</a>
-            
-        </div>
-        </li>
-        </ul>
-    
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-          <ul class="navbar-nav">
-            
-    <li class="nav-item dropdown">
-               <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Menu  Cliente
-                </a>
-    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                <a class="dropdown-item" href="/cadastrarcliente">Cadastro</a>
-                <a class="dropdown-item" href="/show2">Lista</a>
-              
+      <ul class="navbar-nav">
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Menu Livro
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="/">Cadastro</a>
+            <a class="dropdown-item" href="/show">Lista</a>
+
           </div>
+        </li>
+      </ul>
+
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Menu Cliente
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="/cadastrarcliente">Cadastro</a>
+              <a class="dropdown-item" href="/show2">Lista</a>
+
+            </div>
           </li>
-          </ul>
-    
-    
-    </div>
-    </nav>
+        </ul>
+
+
+      </div>
+  </nav>
 
 
 
-    <font color=white>
+  <font color=white>
 
-    <table border="2"><h2><center>Editar Registro</center><h2>
+    <table border="2">
+      <h2>
+        <center>Editar Registro</center>
+        <h2>
 
     </table>
     <br>
-    </font>
-    <center>
+  </font>
+  <center>
 
-  <div class="container">
-  <% data.forEach(function(details) { %>
-    
-    <form class="form-group cadastro" action="/edit/<%= details._id %>" method="POST">
-      <input class="form-control" type="text" placeholder="Nome do livro" value="<%= details.nomedolivro %>" name="nomedolivro"style='width: 400px'><br>
-      <input class="form-control" type="text" placeholder="Nome da editora" value="<%= details.nomedaeditora %>" name="nomedaeditora"style='width: 400px'><br>
-      <input class="form-control" type="text" placeholder="Nome da autor" value="<%= details.nomedoautor %>" name="nomedoautor"style='width: 400px'><br>
-      <input class="form-control" type="number" placeholder="Numero do volume" value="<%= details.numerodovolume %>" name="numerodovolume"style='width: 400px'><br>
-      <input class="form-control" type="number" placeholder="Numero de paginas" value="<%= details.numerodepaginas %>" name="numerodepaginas"style='width: 400px'><br>
-      <input class="form-control" type="date" placeholder="Data de lançamento" value="<%= details.datadelançamento %>" name="datadelançamento"style='width: 400px'><br>
-      <input class="form-control" type="number" placeholder="Numero da edição " value="<%= details.numerodaedição %>" name="numerodaedição"style='width: 400px'><br>
-      <input class="form-control" type="number" placeholder="Codigo do livro" value="<%= details.codigodolivro %>" name="codigodolivro"style='width: 400px'><br>
-      
-      <button class="btn btn-success" type="submit"style='width: 200px'>Confirmar</button>
-      
-      <a href="/show"class="btn btn-danger"style='width: 200px'>Cancelar</a>
-      <br>
-      <br>
-      
-</div>
-    </form></center>
-    
+    <div class="container">
+      <% data.forEach(function(details) { %>
+
+      <form class="form-group cadastro" action="/edit/<%= details._id %>" method="POST">
+        <input class="form-control" type="text" placeholder="Livro" value="<%= details.livro %>" name="livro"
+          style='width: 400px'><br>
+        <input class="form-control" type="text" placeholder="Editora" value="<%= details.editora %>" name="editora"
+          style='width: 400px'><br>
+        <input class="form-control" type="text" placeholder="Autor" value="<%= details.autor %>" name="autor"
+          style='width: 400px'><br>
+        <input class="form-control" type="number" placeholder="Volume" value="<%= details.volume %>" name="volume"
+          style='width: 400px'><br>
+        <input class="form-control" type="number" placeholder="Paginas" value="<%= details.paginas %>" name="paginas"
+          style='width: 400px'><br>
+        <input class="form-control" type="date" placeholder="Data de lançamento" value="<%= details.datadelançamento %>"
+          name="datadelançamento" style='width: 400px'><br>
+        <input class="form-control" type="number" placeholder="Edição " value="<%= details.edição %>" name="edição"
+          style='width: 400px'><br>
+        <input class="form-control" type="number" placeholder="Codigo do livro" value="<%= details.codigodolivro %>"
+          name="codigodolivro" style='width: 400px'><br>
+
+        <button class="btn btn-success" type="submit" style='width: 200px'>Confirmar</button>
+
+        <a href="/show" class="btn btn-danger" style='width: 200px'>Cancelar</a>
+        <br>
+        <br>
+
+    </div>
+    </form>
+  </center>
+
   <% }) %>
- 
+
 </body>
+
 </html>

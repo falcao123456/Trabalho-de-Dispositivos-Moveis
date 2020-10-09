@@ -3,129 +3,143 @@
 
 <head>
 
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+    crossorigin="anonymous"></script>
 
 
-<title>Tela de Listagem</title>
+  <title>Tela de Listagem</title>
 </head>
+
 <body background="https://images2.alphacoders.com/261/26102.jpg">
 
   <nav class="navbar navbar-expand-lg navbar-blue bg-dark">
-  
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Alterna navegação">
-    <span class="navbar-toggler-icon"></span>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Alterna navegação">
+      <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
-    <ul class="navbar-nav">
-        
+      <ul class="navbar-nav">
+
         <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                     Menu Livro
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Menu Livro
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <a class="dropdown-item" href="/">Cadastro</a>
             <a class="dropdown-item" href="/show">Lista</a>
-          
-      </div>
-      </li>
+
+          </div>
+        </li>
       </ul>
-  
+
       <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      <ul class="navbar-nav">
-          
-      <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                             Menu Cliente 
-              </a>
-      <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+        <ul class="navbar-nav">
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Menu Cliente
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
               <a class="dropdown-item" href="/cadastrarcliente">Cadastro</a>
               <a class="dropdown-item" href="/show2">Lista</a>
-            
-  </div>
-  </li>
-  </ul>
-  </div>
+
+            </div>
+          </li>
+        </ul>
+      </div>
   </nav>
 
 
-  
-  <font color=white> 
-  <center><h2>Registros</h2> </font> <br>
- 
-  <table class="table table-bordered table-dark"style='width: 1350px' </table>   >
-    
+
+  <font color=white>
+    <center>
+      <h2>Registros de Livros</h2>
+  </font> <br>
+
+  <table class="table table-bordered table-dark" style='width: 1350px' </table> >
+
     <thead>
-    <tr>
-        <td>Nome do livro</td>
-        <td>Nome da editora</td>
-        <td>Nome do autor</td>
-        <td>Numero do volume</td>
-        <td>Numero de paginas</td>
+      <tr>
+        <td>Livro</td>
+        <td>Editora</td>
+        <td>Autor</td>
+        <td>Volume</td>
+        <td>Paginas</td>
         <td>Data de lançamento</td>
-        <td>Numero da edição</td>
+        <td>Edição</td>
         <td>Codigo do livro</td>
-        <td>Configurar</td> 
-      </center>
+        <td>Configurar</td>
+        </center>
 
-  </tr>
-  </thead>
+      </tr>
+    </thead>
 
 
 
-  <tbody>
+    <tbody>
 
       <% data.forEach(function(details) { %>
       <tr>
-        <td><%= details.nomedolivro %></td>
-        <td><%= details.nomedaeditora %></td>
-        <td><%= details.nomedoautor %></td>
-        <td><%= details.numerodovolume %></td>
-        <td><%= details.numerodepaginas %></td>
+        <td><%= details.livro %></td>
+        <td><%= details.editora %></td>
+        <td><%= details.autor %></td>
+        <td><%= details.volume %></td>
+        <td><%= details.paginas %></td>
         <td><%= details.datadelançamento %></td>
-        <td><%= details.numerodaedição %></td>
-        <td><%= details.codigodolivro %></td>  
-        
-  <td><a href="/edit/<%= details._id %>">Editar</a> - 
-  
-     
-    <button type="button" class="btn-link" data-toggle="modal" data-target="#confirm">Deletar</button>
-       
-           <div class="modal fade" id="confirm" role="dialog">
-           <div class="modal-dialog modal-md">
-           
+        <td><%= details.edição %></td>
+        <td><%= details.codigodolivro %></td>
+
+        <td><a href="/edit/<%= details._id %>">Editar</a> -
+
+
+          <button type="button" class="btn-link" data-toggle="modal" data-target="#confirm">Deletar</button>
+
+          <div class="modal fade" id="confirm" role="dialog">
+            <div class="modal-dialog modal-md">
+
               <div class="modal-content">
-              <div class="modal-body" >
-                   <font color=Black>
-                        Deseja realmente fazer isso?
-                       
-                </font>
+                <div class="modal-body">
+                  <font color=Black>
+                    Deseja realmente fazer isso?
+
+                  </font>
                 </div>
                 <div class="modal-footer">
-                <a href="/delete/<%= details._id %>"  type="button" class="btn btn-danger" id="delete">Apagar Registo</a>
-                <button href="/show" type="button" data-dismiss="modal" class="btn btn-default">Cancelar</button>
+                  <a href="/delete/<%= details._id %>" type="button" class="btn btn-danger" id="delete">Apagar
+                    Registo</a>
+                  <button href="/show" type="button" data-dismiss="modal" class="btn btn-default">Cancelar</button>
 
-    </div>
-    </div>
-    </div>
-    </div>
-    
-      
-  
-  
-  </a></td>
-  </tr>
+                </div>
+              </div>
+            </div>
+          </div>
 
-  
 
- <% }) %>
-  </tbody>
+
+
+          </a>
+        </td>
+      </tr>
+
+
+
+      <% }) %>
+    </tbody>
   </table> <br>
-  <a href="/"class="btn btn-dark"style= 'margin-top:-50px'>Novo Cadastro</a>
-  
+  <a href="/" class="btn btn-dark" style='margin-top:-50px'>Novo Cadastro</a>
+
 </body>
+
 </html>

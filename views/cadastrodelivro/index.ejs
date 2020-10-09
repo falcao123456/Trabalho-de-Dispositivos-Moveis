@@ -1,81 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title> Tela - Cadastro de Livros</title>
-  <import {jquery.min.js} from= "../../"></import>
+  <import {jquery.min.js} from="../../"></import>
 
 </head>
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+  integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+  integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
-<body background="https://images2.alphacoders.com/261/26102.jpg" >
-  
+<body background="https://images2.alphacoders.com/261/26102.jpg">
 
-<nav class="navbar navbar-expand-lg navbar-blue bg-dark">
-  
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Alterna navegação">
-  <span class="navbar-toggler-icon"></span>
-  </button>
 
-  <div class="collapse navbar-collapse" id="navbarNavDropdown">
-    <ul class="navbar-nav">
-      
-  <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Menu  Livro
-        </a>
-  <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-        <a class="dropdown-item" href="/">Cadastro</a>
-        <a class="dropdown-item" href="/show">Lista</a>
-        
-    </div>
-    </li>
-    </ul>
+  <nav class="navbar navbar-expand-lg navbar-blue bg-dark">
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Alterna navegação">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav">
-        
-    <li class="nav-item dropdown">
-            <a  class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-               Menu Cliente
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Menu Livro
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="/">Cadastro</a>
+            <a class="dropdown-item" href="/show">Lista</a>
+
+          </div>
+        </li>
+      </ul>
+
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              Menu Cliente
             </a>
-         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" href="/cadastrarcliente">Cadastro</a>
-            <a class="dropdown-item" href="/show2">Lista</a>
-         
-</div>
-</li>
-</ul>
-</div>
-</nav>
-       
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="/cadastrarcliente">Cadastro</a>
+              <a class="dropdown-item" href="/show2">Lista</a>
+
+            </div>
+          </li>
+        </ul>
+      </div>
+  </nav>
 
 
-    <font color=white> 
-    <table ><h2><center>Registrar Livro</center><h2>
-    </font>
-    </table>
-     <br>
-       
-      <center>
-        <form action="/show" method="POST">
-        <input class="form-control" type="text" placeholder="Nome do livro" name="nomedolivro"style='width: 400px'><br>
-        <input class="form-control" type="text" placeholder="Nome da editora" name="nomedaeditora"style='width: 400px'><br>
-        <input class="form-control" type="text" placeholder="Nome do autor" name="nomedoautor"style='width: 400px'><br>
-        <input class="form-control" type="number" placeholder="Numero do volume" name="numerodovolume"style='width: 400px'><br>
-        <input class="form-control" type="number" placeholder="Numero de paginas" name="numerodepaginas"style='width: 400px'><br>
-        <input class="form-control" type="date" placeholder="Data de lançamento" name="datadelançamento"style='width: 400px'><br>
-        <input class="form-control" type="number" placeholder="Numero da edição " name="numerodaedição"style='width: 400px'><br>
-        <input class="form-control" type="number" placeholder="Codigo do livro" name="codigodolivro"style='width: 400px'><br>
-      
-        <button type="submit" class="btn btn-dark"style='width: 200px'>Cadastrar</button>
 
-        <a href="/show"class="btn btn-primary"style='width: 200px'>Consultar</a>
-        <br> <br>
-    </center>  
-    </form> 
-<script src="../../bootstrap.bundle.min.js"></script>
+  <font color=white>
+    <table>
+      <h2>
+        <center>Registrar Livro</center>
+        <h2>
+  </font>
+  </table>
+  <br>
+
+  <center>
+    <form action="/show" method="POST">
+      <input class="form-control" type="text" placeholder="Livro" name="livro" style='width: 400px'><br>
+      <input class="form-control" type="text" placeholder="Editora" name="editora" style='width: 400px'><br>
+      <input class="form-control" type="text" placeholder="Autor" name="autor" style='width: 400px'><br>
+      <input class="form-control" type="number" placeholder="Volume" name="volume" style='width: 400px'><br>
+      <input class="form-control" type="number" placeholder="Paginas" name="paginas" style='width: 400px'><br>
+      <input class="form-control" type="date" placeholder="Data de lançamento" name="datadelançamento"
+        style='width: 400px'><br>
+      <input class="form-control" type="number" placeholder="Edição " name="edição" style='width: 400px'><br>
+      <input class="form-control" type="number" placeholder="Codigo do livro" name="codigodolivro"
+        style='width: 400px'><br>
+
+      <button type="submit" class="btn btn-dark" style='width: 200px'>Cadastrar</button>
+
+      <a href="/show" class="btn btn-primary" style='width: 200px'>Consultar</a>
+      <br> <br>
+  </center>
+  </form>
+  <script src="../../bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
