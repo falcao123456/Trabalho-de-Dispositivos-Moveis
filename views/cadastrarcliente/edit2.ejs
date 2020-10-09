@@ -10,7 +10,8 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
-
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>
 
 <body background="https://c.wallhere.com/photos/26/cf/library_interior_interior_design_books_knowledge_shelves-72435.jpg!d" >
     <body ></body>
@@ -66,19 +67,28 @@
 <div class="container">
   <% data.forEach(function(details) { %>
     
+    
       <form class="form-group cadastro" action="/edit2/<%= details._id %>" method="POST">
-      <input class="form-control" type="text"   placeholder="Nome"                 value="<%= details.nome %>"           name="nome"style='width: 400px'><br>
-      <input class="form-control" type="text"   placeholder="Sobrenome"            value="<%= details.sobrenome %>"      name="sobrenome"style='width: 400px'><br>
-      <input class="form-control" type="number"   placeholder="CPF"                  value="<%= details.cpf %>"            name="cpf"style='width: 400px'><br>
-      <input class="form-control" type="date"   placeholder="Data de Nascimento"   value="<%= details.datanascimento %>" name="datanascimento"style='width: 400px'><br>
-      <input class="form-control" type="email"  placeholder="Email"                value="<%= details.email %>"          name="email"style='width: 400px'><br>
-      <input class="form-control" type="text"   placeholder="Pais"                 value="<%= details.pais %>"           name="pais"style='width: 400px'><br>
-      <input class="form-control" type="text"   placeholder="Estado"               value="<%= details.estado %>"         name="estado"style='width: 400px'><br>
-      <input class="form-control" type="text" placeholder="Cidade"                 value="<%= details.cidade %>"         name="cidade"style='width: 400px'><br>
-      <input class="form-control" type="text" placeholder="Rua"                    value="<%= details.rua %>"            name="rua"style='width: 400px'><br>
-      <input class="form-control" type="number" placeholder="Numero da casa"       value="<%= details.numerocasa %>"     name="numerocasa"style='width: 400px'><br>
-      <input class="form-control" type="number" placeholder="Numero para contato"  value="<%= details.numerocontato %>"  name="numerocontato"style='width: 400px'><br>
+      <input class="form-control" type="text"  placeholder="Nome"                 value="<%= details.nome %>"           name="nome"style='width: 400px'><br>
+      <input class="form-control" type="text"  placeholder="Sobrenome"            value="<%= details.sobrenome %>"      name="sobrenome"style='width: 400px'><br>
+      <input class="form-control" type="text"  placeholder="CPF"                  value="<%= details.cpf %>"   id="cpf" name="cpf"style='width: 400px'><br>
+      <input class="form-control" type="date"  placeholder="Data de Nascimento"   value="<%= details.datanascimento %>" name="datanascimento"style='width: 400px'><br>
+      <input class="form-control" type="email" placeholder="Email"                value="<%= details.email %>"          name="email"style='width: 400px'><br>
+      <input class="form-control" type="text"  placeholder="Pais"                 value="<%= details.pais %>"           name="pais"style='width: 400px'><br>
+      <input class="form-control" type="text"  placeholder="Estado"               value="<%= details.estado %>"         name="estado"style='width: 400px'><br>
+      <input class="form-control" type="text"  placeholder="Cidade"               value="<%= details.cidade %>"         name="cidade"style='width: 400px'><br>
+      <input class="form-control" type="text"  placeholder="Rua"                  value="<%= details.rua %>"            name="rua"style='width: 400px'><br>
+      <input class="form-control" type="text"  placeholder="Numero da casa"       value="<%= details.numerocasa %>"     id="numerocasa" name="numerocasa" style='width: 400px'><br>
+      <input class="form-control" type="text"  placeholder="Numero para contato"  value="<%= details.numerocontato %>"  id="numerocontato" name="numerocontato" style='width: 400px'><br>
       
+      <script type="text/javascript">
+        $("#numerocontato").mask("(00) 00000-0000");
+        $("#cpf").mask(" 000.000.000-00");
+        $("#numerocasa").mask(" 000");
+        </script>
+
+
+
       <a href="/show2"class="btn btn-danger"style='width: 200px'>Cancelar</a>
 
       <button class="btn btn-success" type="submit"style='width: 200px'>Confirmar</button>

@@ -31,7 +31,7 @@ app.get('/cadastrarcliente', function(req, res){
    });
 
    app.post('/show2', (req, res)=>{
-    //criar a coleção “data”, que irá armazenar nossos dados
+    console.log(req.body)
     db.collection('data').save(req.body, (err, result) => {
         if (err) return console.log(err)
      
@@ -50,7 +50,11 @@ app.get('/show2', (req, res) => {
         res.render('cadastrarcliente/show2.ejs', { data: results })
  
     })
+
+    
 })
+
+
 // METODO EDITAR SEGUNDA PAGINA***************************************************
 
 app.route('/edit2/:id')
