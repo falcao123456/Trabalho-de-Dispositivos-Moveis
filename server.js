@@ -25,14 +25,13 @@ app.set('views engine', 'ejs')
 
 // Codigos referente a segunda pagina********************************************************************
 
-
 app.get('/cadastrarcliente', function(req, res){
   res.render('cadastrarcliente/index2.ejs');
    });
 
    app.post('/show2', (req, res)=>{
     
-    db.collection('data').save(req.body, (err, result) => {
+    db.collection('data2').save(req.body, (err, result) => {
         if (err) return console.log(err)
      
         console.log('Salvo no Banco de Dados')
@@ -41,11 +40,11 @@ app.get('/cadastrarcliente', function(req, res){
 });
 
 app.get('/cadastrarcliente', (req, res) => {
-    var cursor = db.collection('data').find()
+    var cursor = db.collection('data2').find()
 })
  
 app.get('/show2', (req, res) => {
-    db.collection('data').find().toArray((err, results) => {
+    db.collection('data2').find().toArray((err, results) => {
         if (err) return console.log(err)
         res.render('cadastrarcliente/show2.ejs', { data: results })
  
@@ -61,7 +60,7 @@ app.route('/edit2/:id')
 .get((req, res) => {
   var id = req.params.id
  
-  db.collection('data').find(ObjectId(id)).toArray((err, result) => {
+  db.collection('data2').find(ObjectId(id)).toArray((err, result) => {
     if (err) return res.send(err)
     res.render('cadastrarcliente/edit2.ejs', { data: result })
   })
@@ -81,7 +80,7 @@ app.route('/edit2/:id')
   var numerocontato = req.body.numerocontato
 
  
-  db.collection('data').updateOne({_id: ObjectId(id)}, {
+  db.collection('data2').updateOne({_id: ObjectId(id)}, {
     $set: {
       nome: nome,
       sobrenome: sobrenome,
@@ -109,7 +108,7 @@ app.route('/delete2/:id')
 .get((req, res) => {
   var id = req.params.id
  
-  db.collection('data').deleteOne({_id: ObjectId(id)}, (err, result) => {
+  db.collection('data2').deleteOne({_id: ObjectId(id)}, (err, result) => {
     if (err) return res.send(500, err)
     console.log('Deletado do Banco de Dados!')
     res.redirect('/show2')
