@@ -75,6 +75,7 @@ app.route('/edit2/:id')
     var email = req.body.email
     var pais = req.body.pais
     var estado = req.body.estado
+    var cidade = req.body.cidade
     var rua = req.body.rua
     var numerocasa = req.body.numerocasa
     var numerocontato = req.body.numerocontato
@@ -89,6 +90,7 @@ app.route('/edit2/:id')
         email: email,
         pais: pais,
         estado: estado,
+        cidade: cidade,
         rua: rua,
         numerocasa: numerocasa,
         numerocontato: numerocontato,
