@@ -31,7 +31,7 @@ app.get('/cadastrarcliente', function(req, res){
    });
 
    app.post('/show2', (req, res)=>{
-    console.log(req.body)
+    
     db.collection('data').save(req.body, (err, result) => {
         if (err) return console.log(err)
      
@@ -117,9 +117,6 @@ app.route('/delete2/:id')
 })
 
 //FInal do codigo****************************************************************************************
-
-
-
 
 
 
